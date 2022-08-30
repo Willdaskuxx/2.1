@@ -108,7 +108,7 @@ def login_sucess():
     login_success_screen.title("Success")
     login_success_screen.geometry("150x100")
     Label(login_success_screen, text="Login Success").pack()
-    Button(login_success_screen, text="OK", command=delete_login_success).pack()
+    Button(login_success_screen, text="OK", command=delete_all).pack()
 
 
 # Designing popup for login invalid password
@@ -138,6 +138,8 @@ def user_not_found():
 def delete_login_success():
     login_success_screen.destroy()
 
+def delete_login_screen():
+    login_screen.destroy()
 
 def delete_password_not_recognised():
     password_not_recog_screen.destroy()
@@ -146,6 +148,13 @@ def delete_password_not_recognised():
 def delete_user_not_found_screen():
     user_not_found_screen.destroy()
 
+def delete_main_account_screen():
+    main_screen.destroy()
+
+def delete_all():
+    login_success_screen.destroy()
+    delete_login_screen()
+    delete_main_account_screen()
 
 # Designing Main(first) window
 
